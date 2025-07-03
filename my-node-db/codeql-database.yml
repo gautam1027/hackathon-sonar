@@ -1,0 +1,13 @@
+---
+sourceLocationPrefix: C:\Users\Dell\hackathon-starter
+baselineLinesOfCode: 5099
+unicodeNewlines: true
+columnKind: utf16
+primaryLanguage: javascript
+creationMetadata:
+  sha: 4c22d29619b04f565e45e05bd5964781cab2a835
+  cliVersion: 2.22.1
+  creationTime: 2025-07-01T07:47:00.664794800Z
+overlayBaseDatabase: false
+overlayDatabase: false
+finalised: true
