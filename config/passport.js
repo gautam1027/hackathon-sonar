@@ -861,7 +861,13 @@ exports.isAuthenticated = (req, res, next) => {
  * Authorization Required middleware.
  */
 exports.isAuthorized = async (req, res, next) => {
+  const validProviders = ['google', 'facebook', 'github']; // Add your real providers here
   const provider = req.path.split('/')[2];
+
+  if (!validProviders.includes(provider)) {
+    return res.redirect('/auth'); // fallback if invalid provider
+  }
+
   const token = req.user.tokens.find((token) => token.kind === provider);
   if (token) {
     if (token.accessTokenExpires && moment(token.accessTokenExpires).isBefore(moment().subtract(1, 'minutes'))) {
